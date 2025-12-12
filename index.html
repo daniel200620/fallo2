@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Ti ❤️</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- HOME -->
+<div id="home" class="seccion-activa">
+    <div class="mensaje-inicial">
+        <h1>Gracias por cada momento ❤️</h1>
+    </div>
+
+    <div class="botones-principales">
+        <button class="boton-principal" data-show="tu">Tú ✨</button>
+        <button class="boton-principal" data-show="nosotros">Nosotros ❤️</button>
+        <button class="boton-principal" data-show="carta">💌 Carta para ti</button>
+    </div>
+
+    <button class="btn-musica" id="btnPlay">▶ Escuchar canción</button>
+    <button id="btnNext" class="boton-principal btn-musica">⏭️ Siguiente canción</button>
+    <button id="btnTema" class="boton-principal btn-musica">🌙 Modo oscuro</button>
+</div>
+
+<audio id="miMusica" preload="auto"></audio>
+
+<!-- CORAZONES -->
+<script>
+document.addEventListener('click', function(e) {
+    const heart = document.createElement('div');
+    heart.classList.add('corazon');
+    let x = e.pageX, y = e.pageY;
+    if (e.touches && e.touches[0]) { x = e.touches[0].pageX; y = e.touches[0].pageY; }
+    heart.style.left = (x - 10) + 'px';
+    heart.style.top = (y - 10) + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1800);
+});
+</script>
+
+<!-- CARTA -->
+<div id="carta" class="seccion" style="display:none;">
+    <h1>💌 Una carta para ti</h1>
+    <a class="volver" href="#" data-show="home">⬅ Volver</a>
+    <div class="carta-contenedor">
+        <div class="carta">
+            <p>
+                Hola María…  
+                <br><br>
+                No sé si verás esto algún día, pero aunque no me creas, realmente veo un futuro contigo:  
+                viviendo juntos y formando una familia. He cambiado la forma de ver la vida, y de verdad me gustaría que esto fuera posible.  
+                Jamás volveré a rendirme en la vida como antes, ni descuidaré a las personas que amo por ello.  
+                Como siempre dices, "todo pasa por algo", y yo ya he entendido el porqué de esto.  
+                Esto ha sido para mí un aprendizaje, para mejorar como persona y como pareja.
+                <br><br>
+                No es vender la moto para volver; realmente pienso que las cosas serían **muy diferentes**.  
+                Y no diferentes solo por un tiempo, sino en todo sentido.  
+                Eres la persona con la que más me he sentido yo mismo, y me encanta ser yo contigo.  
+                Hemos pasado por millones de cosas, pero siempre juntos, y eso nos ha hecho más fuertes.  
+                Como dice la canción: "solo en tu boca es donde encuentro sentido y razones a esta vida loca".  
+                La vida es menos complicada cuando estás.
+                <br><br>
+                Al final, la vida se trata de disfrutar con las personas que merecen tu tiempo y tu cariño.  
+                Al fin y al cabo, estamos de paso y no estamos aquí para perder el tiempo.  
+                Para mí, siempre vas a ser **Venus en mi cielo de estrellas**.  
+                La estrella que más brilla…
+                <br><br>
+                Gracias por cada momento, cada abrazo, cada beso, cada risa…  
+                Gracias por lo que fuiste, por lo que somos ahora,  
+                y por lo que, quién sabe, quizá algún día podamos volver a ser.  
+                <br><br>
+                Pase lo que pase, siempre te voy a desear lo mejor.  
+                <br><br>
+                Te quiero ❤️
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- TÚ -->
+<div id="tu" class="seccion" style="display:none;">
+    <h1>Tú ✨</h1>
+    <a class="volver" href="#" data-show="home">⬅ Volver</a>
+    <div class="botones-sub">
+        <button class="boton-sub" data-show="maria">María 💖</button>
+        <button class="boton-sub" data-show="familia">Familia 👨‍👩‍👧</button>
+        <button class="boton-sub" data-show="gala">Gala 🐾</button>
+    </div>
+</div>
+
+<!-- NOSOTROS -->
+<div id="nosotros" class="seccion" style="display:none;">
+    <h1>Nosotros ❤️</h1>
+    <a class="volver" href="#" data-show="home">⬅ Volver</a>
+    <div class="botones-sub">
+        <button class="boton-sub" data-show="jaen">Jaén 🏞️</button>
+        <button class="boton-sub" data-show="chiclana">Chiclana 🌊</button>
+        <button class="boton-sub" data-show="md">M+D ❤️</button>
+        <button class="boton-sub" data-show="tenerife">Tenerife 🌴</button>
+        <button class="boton-sub" data-show="tonterias">Tonterías 😂</button>
+    </div>
+</div>
+
+<!-- GALERÍAS -->
+
+<!-- MARÍA -->
+<div id="maria" class="seccion" style="display:none;">
+    <h1>María 💖</h1>
+    <a class="volver" href="#" data-show="tu">⬅ Volver</a>
+    <button class="btn-collage" data-collage="maria">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/maria/m1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/maria/m2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/maria/m3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/maria/m4.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/maria/m5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/maria/m6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/maria/m7.jpg" alt="Foto 7">
+        <img class="polaroid" src="img/maria/m8.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/maria/m9.jpg" alt="Foto 9">
+        <img class="polaroid" src="img/maria/m10.jpg" alt="Foto 10">
+        <img class="polaroid" src="img/maria/m11.jpg" alt="Foto 11">
+        <img class="polaroid" src="img/maria/m12.jpg" alt="Foto 12">
+    </div>
+    <div class="collage" id="collage-maria"></div>
+</div>
+
+<!-- FAMILIA -->
+<div id="familia" class="seccion" style="display:none;">
+    <h1>Familia 👨‍👩‍👧</h1>
+    <a class="volver" href="#" data-show="tu">⬅ Volver</a>
+    <button class="btn-collage" data-collage="familia">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/familia/f1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/familia/f2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/familia/f3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/familia/f4.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/familia/f5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/familia/f6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/familia/f7.jpg" alt="Foto 7">
+        <img class="polaroid" src="img/familia/f8.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/familia/f9.jpg" alt="Foto 9">
+    </div>
+    <div class="collage" id="collage-familia"></div>
+</div>
+
+<!-- GALA -->
+<div id="gala" class="seccion" style="display:none;">
+    <h1>Gala 🐾</h1>
+    <a class="volver" href="#" data-show="tu">⬅ Volver</a>
+    <button class="btn-collage" data-collage="gala">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/gala/g3.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/gala/g4.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/gala/g5.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/gala/g6.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/gala/g7.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/gala/g9.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/gala/g10.jpg" alt="Foto 7">
+        <img class="polaroid" src="img/gala/g11.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/gala/g12.jpg" alt="Foto 9">
+        <img class="polaroid" src="img/gala/g13.jpg" alt="Foto 10">
+        <img class="polaroid" src="img/gala/g14.jpg" alt="Foto 11">
+        <img class="polaroid" src="img/gala/g15.jpg" alt="Foto 12">
+    </div>
+    <div class="collage" id="collage-gala"></div>
+</div>
+
+<!-- JAÉN -->
+<div id="jaen" class="seccion" style="display:none;">
+    <h1>Jaén 🏞️</h1>
+    <a class="volver" href="#" data-show="nosotros">⬅ Volver</a>
+    <button class="btn-collage" data-collage="jaen">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/jaen/j1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/jaen/j2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/jaen/j3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/jaen/j4.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/jaen/j5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/jaen/j6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/jaen/j7.jpg" alt="Foto 7">
+    </div>
+    <div class="collage" id="collage-jaen"></div>
+</div>
+
+<!-- CHICLANA -->
+<div id="chiclana" class="seccion" style="display:none;">
+    <h1>Chiclana 🌊</h1>
+    <a class="volver" href="#" data-show="nosotros">⬅ Volver</a>
+    <button class="btn-collage" data-collage="chiclana">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/chiclana/c1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/chiclana/c2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/chiclana/c3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/chiclana/c4.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/chiclana/c5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/chiclana/c6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/chiclana/c7.jpeg" alt="Foto 7">
+        <img class="polaroid" src="img/chiclana/c8.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/chiclana/c9.jpg" alt="Foto 9">
+        <img class="polaroid" src="img/chiclana/c10.jpg" alt="Foto 10">
+        <img class="polaroid" src="img/chiclana/c11.jpg" alt="Foto 11">
+        <img class="polaroid" src="img/chiclana/c12.jpg" alt="Foto 12">
+    </div>
+    <div class="collage" id="collage-chiclana"></div>
+</div>
+
+<!-- M+D -->
+<div id="md" class="seccion" style="display:none;">
+    <h1>M+D ❤️</h1>
+    <a class="volver" href="#" data-show="nosotros">⬅ Volver</a>
+    <button class="btn-collage" data-collage="md">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/m+d/md1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/m+d/md2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/m+d/md3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/m+d/md4.jpg" alt="Foto 4">
+        <video class="polaroid" controls>
+            <source src="img/m+d/vmd1.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <img class="polaroid" src="img/m+d/md5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/m+d/md6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/m+d/md7.jpg" alt="Foto 7">
+        <img class="polaroid" src="img/m+d/md8.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/m+d/md9.jpg" alt="Foto 9">
+        <img class="polaroid" src="img/m+d/md10.jpg" alt="Foto 10">
+        <img class="polaroid" src="img/m+d/md11.jpg" alt="Foto 11">
+    </div>
+    <div class="collage" id="collage-md"></div>
+</div>
+
+<!-- TENERIFE -->
+<div id="tenerife" class="seccion" style="display:none;">
+    <h1>Tenerife 🌴</h1>
+    <a class="volver" href="#" data-show="nosotros">⬅ Volver</a>
+    <button class="btn-collage" data-collage="tenerife">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/tenerife/t1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/tenerife/t2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/tenerife/t3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/tenerife/t4.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/tenerife/t5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/tenerife/t6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/tenerife/t7.jpg" alt="Foto 7">
+        <img class="polaroid" src="img/tenerife/t8.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/tenerife/t9.jpg" alt="Foto 9">
+        <video class="polaroid" controls>
+            <source src="img/tenerife/tv1.mp4" type="video/mp4">
+            Tu navegador no soporta videos
+        </video>
+        <img class="polaroid" src="img/tenerife/t10.jpg" alt="Foto 10">
+        <img class="polaroid" src="img/tenerife/t11.jpg" alt="Foto 11">
+    </div>
+    <div class="collage" id="collage-tenerife"></div>
+</div>
+
+<!-- TONTERÍAS -->
+<div id="tonterias" class="seccion" style="display:none;">
+    <h1>Tonterías 😂</h1>
+    <a class="volver" href="#" data-show="nosotros">⬅ Volver</a>
+    <button class="btn-collage" data-collage="tonterias">Ver montaje</button>
+    <div class="galeria">
+        <img class="polaroid" src="img/tonterias/tt1.jpg" alt="Foto 1">
+        <img class="polaroid" src="img/tonterias/tt2.jpg" alt="Foto 2">
+        <img class="polaroid" src="img/tonterias/tt3.jpg" alt="Foto 3">
+        <img class="polaroid" src="img/tonterias/tt4.jpg" alt="Foto 4">
+        <img class="polaroid" src="img/tonterias/tt5.jpg" alt="Foto 5">
+        <img class="polaroid" src="img/tonterias/tt6.jpg" alt="Foto 6">
+        <img class="polaroid" src="img/tonterias/tt7.jpg" alt="Foto 7">
+        <img class="polaroid" src="img/tonterias/tt8.jpg" alt="Foto 8">
+        <img class="polaroid" src="img/tonterias/tt9.jpg" alt="Foto 9">
+        <img class="polaroid" src="img/tonterias/tt10.jpg" alt="Foto 10">
+        <img class="polaroid" src="img/tonterias/tt11.jpg" alt="Foto 11">
+        <img class="polaroid" src="img/tonterias/tt12.jpg" alt="Foto 12">
+    </div>
+    <div class="collage" id="collage-tonterias"></div>
+</div>
+
+<script>
+(function(){
+
+    // LOGIN
+    const usuario = prompt("Usuario:");
+    const contraseña = prompt("Contraseña:");
+    if(usuario !== "maria" || contraseña !== "200620"){
+        alert("No tienes acceso 😢");
+        document.body.innerHTML = "<h1>Acceso denegado</h1>";
+        return;
+    }
+
+    // SECCIONES
+    const sections = document.querySelectorAll('.seccion');
+    const home = document.getElementById('home');
+
+    function mostrar(id){
+        if(id === "md"){
+            const userMD = prompt("Sección privada ❤️. Introduce la contraseña:");
+            if(userMD !== "amor123"){
+                alert("Todavía no es el momento… 💌");
+                return;
+            }
+        }
+        home.style.display = 'none';
+        sections.forEach(s => s.style.display = 'none');
+        if(id === 'home'){ home.style.display = 'block'; return; }
+        const el = document.getElementById(id);
+        if(el){ el.style.display = 'block'; window.scrollTo(0,0); }
+    }
+
+    document.addEventListener('click', function(e){
+        const target = e.target;
+        const show = target.getAttribute && target.getAttribute('data-show');
+        if(show){ e.preventDefault(); mostrar(show); }
+    });
+
+    mostrar('home');
+
+    // PLAYLIST
+    const playlist = ["audio/solyluna.mp3","audio/tuboca.mp3","audio/porfinte.mp3"];
+    let indiceCancion = 0;
+    const musica = document.getElementById('miMusica');
+    musica.src = playlist[indiceCancion];
+
+    musica.addEventListener('ended', () => {
+        indiceCancion++;
+        if(indiceCancion >= playlist.length) indiceCancion = 0;
+        musica.src = playlist[indiceCancion];
+        musica.play();
+    });
+
+    const btnPlay = document.getElementById('btnPlay');
+    btnPlay.addEventListener('click', ()=>{ 
+        if(musica.paused){ musica.play().catch(()=>{}); btnPlay.textContent='⏸️ Pausar canción'; } 
+        else { musica.pause(); btnPlay.textContent='▶ Escuchar canción'; } 
+    });
+
+    const btnNext = document.getElementById('btnNext');
+    btnNext.addEventListener('click', ()=>{
+        indiceCancion++; if(indiceCancion>=playlist.length) indiceCancion=0;
+        musica.src = playlist[indiceCancion]; musica.play();
+    });
+
+    // Modo oscuro
+    const btnTema = document.getElementById('btnTema');
+    btnTema.addEventListener('click', () => {
+        document.body.classList.toggle('tema-oscuro');
+        btnTema.textContent = document.body.classList.contains('tema-oscuro') ? "☀️ Modo claro" : "🌙 Modo oscuro";
+    });
+
+    // Estrellas
+    for(let i=0;i<40;i++){
+        const e=document.createElement("div");
+        e.classList.add("estrella");
+        e.style.left=Math.random()*100+"%";
+        e.style.top=Math.random()*100+"%";
+        e.style.animationDelay=(Math.random()*2)+"s";
+        document.body.appendChild(e);
+    }
+
+    // COLLAGE
+    const botonesCollage = document.querySelectorAll('.btn-collage');
+    botonesCollage.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+            const galeria = btn.nextElementSibling;
+            const collage = galeria.nextElementSibling;
+            if(collage.style.display==='flex'){ collage.style.display='none'; galeria.style.display='grid'; return; }
+            const fotos = galeria.querySelectorAll('img, video');
+            collage.innerHTML='';
+            fotos.forEach(f=>{
+                const clone = f.cloneNode(true);
+                collage.appendChild(clone);
+            });
+            galeria.style.display='none';
+            collage.style.display='flex';
+        });
+    });
+
+})();
+</script>
+
+</body>
+</html>
